@@ -30,11 +30,15 @@ class KcityhallPipeline:
             for entry in ordered:
                 entry.pop("index", None)
             payload = json.dumps(ordered, ensure_ascii=True, indent=2)
-            output_path = Path("/Users/abhi/Desktop/Projects/PaulSite/public/news.json")
+            # Use relative path: backend/kCityHall/pipelines.py -> public/data/news.json
+            output_path = Path(__file__).parent.parent.parent / "public" / "data" / "news.json"
         else:
             # Fallback: write whatever was collected.
             payload = json.dumps(self.items, ensure_ascii=True, indent=2)
             output_path = Path("output.json")
+
+        # Ensure output directory exists
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with output_path.open("w", encoding="utf-8") as handle:
             handle.write(payload)

@@ -6,8 +6,8 @@
 import scrapy
 
 class KcityhallItem(scrapy.Item):
-    url = scrapy.Field()
-    date = scrapy.Field()
-    title = scrapy.Field()
+    url     = scrapy.Field()
+    date    = scrapy.Field()
+    title   = scrapy.Field()
     content = scrapy.Field()
-    index = scrapy.Field()
+    index   = scrapy.Field()

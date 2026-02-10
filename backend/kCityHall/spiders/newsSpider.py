@@ -3,7 +3,6 @@ import scrapy
 from kCityHall.items import KcityhallItem
 from kCityHall.selectors import SELECTORS
 
-
 class NewsspiderSpider(scrapy.Spider):
     name = "newsSpider"
     allowed_domains = ["www.kitchener.ca"]

@@ -18,7 +18,7 @@ export function News() {
 
     const loadNews = async () => {
       try {
-        const response = await fetch('/news.json', { cache: 'no-store' });
+        const response = await fetch('/data/news.json', { cache: 'no-store' });
         if (!response.ok) {
           throw new Error(`Failed to load news.json: ${response.status}`);
         }

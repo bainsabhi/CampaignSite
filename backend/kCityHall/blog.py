@@ -1,22 +1,21 @@
-import sys
+import os
 import requests
-import json 
+import json
 from bs4 import BeautifulSoup
-if len(sys.argv) > 1:
-    doc_id = sys.argv[1]
+from pathlib import Path
+
+DOC_ID_ENV = "BLOG_DOC_ID"
 
 def fetch_and_group_articles(doc_id):
     """
     Fetch Google Doc and group flat HTML into structured articles.
     """
     url = f"https://docs.google.com/document/d/{doc_id}/export?format=html"
-    print("Your url is")
-    print(url)
-    response = requests.get(url)
+    response = requests.get(url, timeout=30)
+    response.raise_for_status()
     soup = BeautifulSoup(response.content, 'html.parser')
     # Find all h1 tags
     headings = soup.find_all('h1')
-    print(headings)
     
     articles = []
     
@@ -48,13 +47,27 @@ def fetch_and_group_articles(doc_id):
             articles.append(article)
     return articles
 
-# Now you have structured data
-articles = fetch_and_group_articles(doc_id)
+def main():
+    doc_id = os.getenv(DOC_ID_ENV, "").strip()
+    if not doc_id:
+        raise SystemExit(
+            f"Missing required environment variable: {DOC_ID_ENV}. "
+            "Set it before running this script."
+        )
 
-# Each article contains all its sibling elements grouped together
-for article in articles:
-    print(f"{article}")
+    # Now you have structured data
+    articles = fetch_and_group_articles(doc_id)
+    json_string = json.dumps(articles, ensure_ascii=False, indent=2)
 
-json_string = json.dumps(articles,ensure_ascii=False, indent=2)
-with open('/Users/abhi/Desktop/Projects/PaulSite/public/blog.json', 'w', encoding='utf-8') as f:
-    f.write(json_string)
+    # Use relative path: backend/kCityHall/blog.py -> public/data/blog.json
+    output_path = Path(__file__).parent.parent.parent / "public" / "data" / "blog.json"
+
+    # Ensure output directory exists
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(json_string)
+
+
+if __name__ == "__main__":
+    main()
