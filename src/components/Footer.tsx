@@ -104,10 +104,14 @@ export function Footer() {
               Contact
             </h4>
             <ul className="space-y-2 text-blue-200">
-              <li>paulsodh@gmail.com</li>
-              <li>(555) 123-4567</li>
-              <li>123 Main Street</li>
-              <li>Your City, ST 12345</li>
+              <li className="font-semibold text-white">Coun. Paul Singh</li>
+              <li className="mt-2">C/O Office of the Mayor and Council</li>
+              <li>Kitchener City Hall</li>
+              <li>200 King St. W.</li>
+              <li>Kitchener, ON N2G 4G7</li>
+              <li className="mt-2">Phone: 519-741-2793</li>
+              <li>Fax: 519-741-2800</li>
+              <li>Email: Paul.Singh@kitchener.ca</li>
             </ul>
           </div>
         </div>

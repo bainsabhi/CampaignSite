@@ -15,10 +15,8 @@ export function Navigation() {
 
   const menuItems = [
     { name: 'Council Meeting', icon: Users, href: '#' },
-    { name: 'Snow Events', icon: Snowflake, href: '#' },
     { name: 'Bylaws', icon: Gavel, href: '/bylaws' },
     { name: 'Budget', icon: FileBarChart, href: '/budget' },
-    { name: 'About Ward 6', icon: Info, href: '#' },
     { name: 'FAQ', icon: HelpCircle, href: '/faq' },
   ];
 
@@ -65,33 +63,33 @@ export function Navigation() {
         <div className="max-w-7xl mx-auto px-4">
           {/* Mobile Navigation */}
           <div className="md:hidden">
-            <div className="flex justify-around items-center py-3">
+            <div className="flex justify-around items-center py-2">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={item.name}
                     to={item.to}
-                    className="flex flex-col items-center text-[#003F72] hover:text-[#b11116] transition-colors p-2"
+                    className="flex flex-col items-center text-[#003F72] hover:text-[#b11116] active:text-white active:bg-[#b11116] rounded-lg transition-all py-1 px-1.5"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Icon size={24} />
-                    <span className="text-xs mt-1 font-medium">{item.name}</span>
+                    <Icon size={20} />
+                    <span className="text-[10px] mt-0.5 font-medium">{item.name}</span>
                   </Link>
                 );
               })}
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`flex flex-col items-center transition-colors p-2 ${isMenuOpen ? 'text-[#b11116]' : 'text-[#003F72] hover:text-[#b11116]'}`}
+                className={`flex flex-col items-center transition-all py-1 px-1.5 rounded-lg ${isMenuOpen ? 'text-[#b11116]' : 'text-[#003F72] hover:text-[#b11116] active:text-white active:bg-[#b11116]'}`}
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                <span className="text-xs mt-1 font-bold">Menu</span>
+                {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                <span className="text-[10px] mt-0.5 font-bold">Menu</span>
               </button>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex justify-between items-center py-4">
+          <div className="hidden md:flex justify-between items-center py-3">
             <div className="flex items-center">
               <span className="text-2xl font-black text-[#b11116] tracking-tight">
                 Paul 2026
@@ -126,7 +124,7 @@ export function Navigation() {
       </nav>
       
       {/* Spacer to prevent content from being hidden behind fixed bottom nav */}
-      <div className="h-20"></div>
+      <div className="h-16 md:h-16"></div>
     </>
   );
 }

@@ -19,3 +19,9 @@ yarn-error.log*
 # Env files
 .env
 .env.*
+
+# Python
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+*.pyo

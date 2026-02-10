@@ -45,9 +45,9 @@ export function QuoteMarquee() {
         ref={marqueeRef}
         className="fixed top-0 left-0 right-0 z-50 bg-[#003F72] py-2 md:py-2.5 border-b border-white/10 shadow-md"
       >
-        <Marquee speed={35} gradient={false} autoFill>
+        <Marquee speed={45} gradient={false} autoFill>
           {quotes.map((quote, index) => (
-            <span key={index} className="mx-0 text-sm md:text-base tracking-wide">
+            <span key={index} className="mx-0 text-xl md:text-2xl tracking-wide">
               <span
                 className="font-bold text-white uppercase"
                 style={{ textShadow: "0 1px 6px rgba(0,0,0,0.4)" }}

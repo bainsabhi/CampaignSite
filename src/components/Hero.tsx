@@ -33,11 +33,11 @@ export function Hero() {
          </motion.div>
 
          {/* Hero Image - Circular Mask */}
-         <motion.div 
+         <motion.div
            initial={{ scale: 0.8, opacity: 0 }}
            animate={{ scale: 1, opacity: 1 }}
            transition={{ duration: 0.8, ease: "easeOut" }}
-           className="relative w-72 h-72 md:w-[500px] md:h-[500px] mb-12 rounded-full overflow-hidden border-8 border-[#003F72] shadow-2xl z-20 bg-gray-200"
+           className="relative w-72 h-72 md:w-[400px] md:h-[400px] mb-12 rounded-full overflow-hidden border-8 border-[#003F72] shadow-2xl z-20 bg-gray-200"
          >
             <ImageWithFallback 
                src="/Images/headShotJPG.jpg"
