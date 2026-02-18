@@ -2,7 +2,7 @@ name: Update Blog and News JSON
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 23 * * *"
   workflow_dispatch:
 
 permissions:
