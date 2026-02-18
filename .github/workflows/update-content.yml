@@ -1,0 +1,46 @@
+name: Update Blog and News JSON
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install scrapy requests beautifulsoup4
+
+      - name: Run blog exporter
+        env:
+          BLOG_DOC_ID: ${{ secrets.BLOG_DOC_ID }}
+        run: python backend/kCityHall/blog.py
+
+      - name: Run news spider
+        working-directory: backend
+        run: scrapy crawl newsSpider
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/blog.json public/data/news.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): update blog and news json"
+          git push
