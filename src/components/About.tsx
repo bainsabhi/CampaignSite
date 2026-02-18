@@ -116,7 +116,7 @@ export function About() {
                 “
               </span>
               <p className="relative z-10 text-xl md:text-2xl font-black text-white leading-tight tracking-tight pt-6 pb-2 text-center md:text-left">
-                I’ll use every tool available to bring down rent, create world-class public transit, and make it easier to raise a family.
+                I think municipalities do have to be a collaborative partner. At the same time, we need to be able to articulate local concerns. Especially when substantive change might impact the community.
               </p>
               <span className="absolute bottom-[-10px] right-6 text-6xl md:text-7xl font-black text-[#5C7FA5] leading-none opacity-50 select-none font-serif rotate-180">
                 “

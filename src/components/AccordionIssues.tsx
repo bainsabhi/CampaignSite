@@ -18,11 +18,11 @@ const sections: Section[] = [
     items: [
       {
         title: 'Advancing "Housing For All"',
-        content: 'Championing a streamlined planning process that achieved 95% of provincial housing targets and approved nearly 4,000 new units.',
+        content: 'Councillor Paul has emphasized that Kitchener is facing a supply crisis, stating, "We need to create increased inventory at the fastest pace available." He has consistently voted to streamline approvals to meet provincial targets, noting that while affordability is critical, the immediate priority must be treating this as a "housing problem specifically" to unlock supply.',
       },
       {
         title: 'Expanding Diverse Options',
-        content: 'Updating the Official Plan to prioritize the "missing middle," resulting in the creation of 594 duplex units and new inclusionary zoning for affordable units.',
+        content: 'As Chair of the Planning & Strategic Initiatives Committee, Paul championed the Missing Middle and Affordable Housing Community Improvement Plan, describing it as a tool to "accelerate the creation of new housing, especially the missing middle and affordable units our residents need most." This initiative specifically targets the creation of family-sized homes near transit and diverse options for seniors and young adults.',
       },
     ],
   },
@@ -31,11 +31,11 @@ const sections: Section[] = [
     items: [
       {
         title: 'Implementing Vision Zero',
-        content: 'Leading a data-driven strategy to eliminate traffic-related fatalities through high-risk "hot spot" interventions and geometric roadway changes.',
+        content: 'Paul has been a vocal proponent of "concrete actions" over theoretical plans, supporting the use of technology like speed cameras to enforce safety while remaining mindful of costs. He noted, "These are the sort of items that our residents will see and we should be proud of the work that we\'re doing here because this will reduce the incidence of injury."',
       },
       {
         title: 'Neighborhood Traffic Calming',
-        content: 'Empowering Ward 6 residents to lead safety projects like painted crosswalks and advocating for regional photo radar in school zones.',
+        content: 'Recognizing that safety concerns vary by street, Paul has advocated for empowering residents to identify local risks, stating that "Vision Zero is very important work" that requires tangible infrastructure changes. He has supported lowering speed limits in residential neighborhoods to create a "people-friendly transportation" network where families feel safe walking and cycling.',
       },
     ],
   },
@@ -44,11 +44,11 @@ const sections: Section[] = [
     items: [
       {
         title: 'Aggressive Grant Acquisition',
-        content: 'Reducing the property tax burden by securing over $204.5 million in external funding for infrastructure and climate projects.',
+        content: 'Leveraging his financial background in the mortgage industry, Paul understands the "diverse financial pressures the average family may experience" and has pushed for securing external funding to offset costs. He has argued that suppressing necessary utility improvements would only defer costs, noting that failing to invest now would "ultimately [have] an impact on the ratepayer" later.',
       },
       {
         title: 'Disciplined Fiscal Management',
-        content: 'Maintaining property tax rate increases at or below inflation levels while funding 50 core municipal services.',
+        content: 'Paul brings an entrepreneurial approach to the city budget, focusing on the "balance required between investing in growth, while curtailing costs" to keep property tax increases manageable. He has consistently advocated for "sub-inflationary" tax increases where possible, ensuring that core services like fire suppression and snow clearing remain fully funded without overburdening homeowners.',
       },
     ],
   },
@@ -57,11 +57,11 @@ const sections: Section[] = [
     items: [
       {
         title: 'Transforming McLennan Park',
-        content: 'Advocating for the continuous upgrade of trails, playgrounds, and community hubs at this cornerstone regional recreation site.',
+        content: 'Addressing long-standing concerns about park amenities, Paul frankly acknowledged the issues with facilities, stating, "I know the status of the washrooms at McLennan Park has been a concern for many." He recently secured a washroom trailer as an interim solution for the 2026 season, promising, "I am committed to ensuring these interim measures at McLennan Park meet your needs while we build for the future."',
       },
       {
         title: 'Building Community Hubs',
-        content: 'Securing essential local amenities including outdoor rinks, community gardens, and the annual "Cinema Under the Stars" event.',
+        content: 'Paul views shared spaces as vital for neighborhood cohesion, highlighting the "many wins" of initiatives like Neighbour\'s Day that are driven by resident "leg work." He is actively overseeing future-focused projects, such as the new splash pad at Lions Park, noting, "We are looking ahead to the future of this vital green space," with a target opening for Summer 2027.',
       },
     ],
   },
@@ -70,11 +70,11 @@ const sections: Section[] = [
     items: [
       {
         title: 'Regional Connectivity',
-        content: 'Partnering with provincial and federal leaders to secure investment for the King Victoria Transit Hub and Kitchener-to-Toronto GO Train service.',
+        content: 'Paul sees active transportation as the critical link to broader regional transit, supporting new wayfinding signage to help residents "navigate our network more easily, connecting you to schools, parks, and transit." He continues to advocate for reliable connections to the Kitchener-to-Toronto GO line, viewing it as essential for the economic prosperity of Ward 6 residents.',
       },
       {
         title: 'Sustainable Mobility',
-        content: 'Expanding the city-wide Cycling and Trails Master Plan with a pilot for asphalted and winter-maintained trails.',
+        content: 'Championing practical improvements for cyclists and pedestrians, Paul led a pilot in Ward 6 for asphalted and winter-maintained trails. He successfully pushed for this standard to be included in the city-wide Cycling and Trails Master Plan, ensuring that active transportation remains a viable year-round option for commuters and families alike.',
       },
     ],
   },
