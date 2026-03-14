@@ -1,4 +1,4 @@
-# Paul Bains Campaign Site
+#Campaign Site
 
 A React campaign website for Paul Bains, built with Vite and deployed on Vercel. News and blog content is pulled automatically from external sources via a nightly GitHub Actions cron job and served as static JSON.
 
