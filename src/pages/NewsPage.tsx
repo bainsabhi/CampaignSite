@@ -3,7 +3,7 @@ import { Footer } from "../components/Footer";
 
 export function NewsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen campaign-page">
       <News />
       <Footer />
     </div>

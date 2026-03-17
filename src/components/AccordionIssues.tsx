@@ -94,8 +94,15 @@ export function AccordionIssues() {
   };
 
   return (
-    <section id="issues" className="py-16 bg-gray-50">
+    <section id="issues" className="campaign-section bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="campaign-header">
+          <p className="campaign-kicker">What Matters Most</p>
+          <h2 className="campaign-title">Issues & Priorities</h2>
+          <p className="campaign-subtitle">
+            Practical actions for housing, affordability, safety, and neighborhood quality of life in Ward 6.
+          </p>
+        </div>
         {sections.map((section, sectionIndex) => (
           <div key={section.category} className="mb-8">
             <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">

@@ -48,13 +48,12 @@ export function News() {
   };
 
   return (
-    <section id="news" className="pt-14 md:pt-16 pb-24 bg-[#F4F7F9] border-b border-gray-200">
+    <section id="news" className="campaign-section pt-14 md:pt-16 pb-24 border-b border-gray-200" style={{ backgroundColor: "var(--campaign-surface-muted)" }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl text-[#b11116] font-black mb-4 tracking-tight">
-            Latest News
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-normal">
+        <div className="campaign-header">
+          <p className="campaign-kicker">Community Updates</p>
+          <h2 className="campaign-title">Latest News</h2>
+          <p className="campaign-subtitle">
             Stay updated with the latest announcements, press releases, and community stories from Paul Singh.
           </p>
         </div>

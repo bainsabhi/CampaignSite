@@ -7,12 +7,12 @@ export function Hero() {
   const titleOpacity = useTransform(scrollY, [0, 300], [1, 0]);
   
   return (
-    <section id="home" className="relative bg-[#003F72] text-white overflow-hidden min-h-screen flex flex-col items-center pt-6 md:pt-10 pb-20">
+    <section id="home" className="relative overflow-hidden min-h-screen flex flex-col items-center pt-8 md:pt-12 pb-24 text-white" style={{ backgroundColor: "var(--campaign-primary)" }}>
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/20 rounded-full blur-[100px]" />
-         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#b11116]/20 rounded-full blur-[100px]" />
+         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full blur-[100px]" style={{ backgroundColor: "color-mix(in oklab, var(--campaign-primary) 30%, white)" }} />
+         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full blur-[100px]" style={{ backgroundColor: "color-mix(in oklab, var(--campaign-accent) 26%, transparent)" }} />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
@@ -22,14 +22,14 @@ export function Hero() {
             style={{ y: titleY, opacity: titleOpacity }} 
             className="mb-8 md:mb-12 relative"
          >
-           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none relative z-10"
-               style={{ textShadow: '3px 3px 0px #b11116' }}>
-             A Proven Record
-           </h1>
-           <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2 md:mt-4">
-              <span className="font-serif italic text-[#b11116] text-2xl md:text-3xl">for</span>
-              <span className="text-2xl md:text-4xl font-bold tracking-wider uppercase">Ward 6</span>
-           </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none relative z-10"
+                style={{ color: '#fff', textShadow: '3px 3px 0px var(--campaign-accent)', letterSpacing: 'var(--campaign-tracking-display)' }}>
+              A Proven Record
+            </h1>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2 md:mt-4">
+               <span className="font-serif italic text-2xl md:text-3xl" style={{ color: '#fff' }}>for</span>
+               <span className="text-2xl md:text-4xl font-bold tracking-wider uppercase" style={{ color: '#fff' }}>Ward 6</span>
+            </div>
          </motion.div>
 
          {/* Hero Image - Circular Mask */}
@@ -37,8 +37,9 @@ export function Hero() {
            initial={{ scale: 0.8, opacity: 0 }}
            animate={{ scale: 1, opacity: 1 }}
            transition={{ duration: 0.8, ease: "easeOut" }}
-           className="relative w-72 h-72 md:w-[400px] md:h-[400px] mb-12 rounded-full overflow-hidden border-8 border-[#003F72] shadow-2xl z-20 bg-gray-200"
-         >
+            className="relative w-72 h-72 md:w-[400px] md:h-[400px] mb-12 rounded-full overflow-hidden border-8 shadow-2xl z-20 bg-gray-200"
+            style={{ borderColor: "var(--campaign-primary)" }}
+          >
             <ImageWithFallback 
                src="/Images/headShotJPG.jpg"
                alt="Paul for Ward 6"
@@ -54,21 +55,17 @@ export function Hero() {
            transition={{ duration: 0.8 }}
            className="max-w-4xl mx-auto space-y-6"
          >
-            <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-               The Work Starts Now.
-            </h2>
-            <p className="text-lg md:text-2xl text-blue-100/90 leading-relaxed font-medium max-w-3xl mx-auto">
-               Paul won with a vision to make Kitchener safe, affordable, and vibrant for all of its residents. 
-               Join us in building a community that puts people first.
-            </p>
+             <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight" style={{ color: '#fff', letterSpacing: 'var(--campaign-tracking-display)' }}>
+                Built in Kitchener. Focused on Ward 6.
+             </h2>
+             <p className="text-lg md:text-2xl leading-relaxed font-medium max-w-3xl mx-auto" style={{ color: '#fff' }}>
+                From Laurentian to Country Hills, let’s keep KW safe, affordable, and full of opportunity for every family.
+             </p>
             
             <div className="pt-8">
-               <a
-                 href="/#get-involved"
-                 className="inline-block bg-[#b11116] text-white text-base md:text-lg font-bold px-8 py-3.5 rounded-full hover:bg-white hover:text-[#b11116] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-               >
-                 Join the Movement
-               </a>
+                <a href="/#get-involved" className="campaign-btn-primary text-base md:text-lg px-8 py-3.5">
+                  Join the Movement
+                </a>
             </div>
          </motion.div>
 

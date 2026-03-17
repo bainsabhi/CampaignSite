@@ -3,7 +3,7 @@ import { Footer } from "../components/Footer";
 
 export function BylawsPage() {
   return (
-    <main>
+    <main className="campaign-page min-h-screen">
       <Bylaws />
       <Footer />
     </main>

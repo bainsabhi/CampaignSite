@@ -3,6 +3,19 @@
 :root {
   --font-size: 16px;
   --quote-marquee-height: 44px;
+  --campaign-primary: #003f72;
+  --campaign-primary-strong: #002f57;
+  --campaign-accent: #b11116;
+  --campaign-accent-strong: #8c0d11;
+  --campaign-surface: #ffffff;
+  --campaign-surface-muted: #f4f7f9;
+  --campaign-ink: #17324f;
+  --campaign-ink-soft: #4b5f73;
+  --campaign-border: rgba(0, 63, 114, 0.16);
+  --campaign-section-y: 4.5rem;
+  --campaign-section-y-lg: 6rem;
+  --campaign-container: 72rem;
+  --campaign-tracking-display: -0.02em;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -191,6 +204,89 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.campaign-page {
+  background: linear-gradient(180deg, var(--campaign-surface-muted) 0%, #ffffff 34%, #ffffff 100%);
+}
+
+.campaign-section {
+  padding: var(--campaign-section-y) 0;
+}
+
+.campaign-shell {
+  max-width: var(--campaign-container);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.campaign-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.campaign-kicker {
+  margin-bottom: 0.65rem;
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: var(--campaign-primary);
+}
+
+.campaign-title {
+  margin: 0;
+  color: var(--campaign-accent);
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  line-height: 1.06;
+  font-weight: 900;
+  letter-spacing: var(--campaign-tracking-display);
+}
+
+.campaign-subtitle {
+  max-width: 44rem;
+  margin: 0.95rem auto 0;
+  color: var(--campaign-ink-soft);
+  font-size: clamp(1rem, 2.2vw, 1.24rem);
+  line-height: 1.65;
+}
+
+.campaign-card {
+  background: var(--campaign-surface);
+  border: 1px solid var(--campaign-border);
+  border-radius: 0.9rem;
+}
+
+.campaign-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--campaign-accent);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.8rem 1.9rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+  box-shadow: 0 8px 24px rgba(177, 17, 22, 0.22);
+}
+
+.campaign-btn-primary:hover {
+  background: var(--campaign-accent-strong);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 768px) {
+  .campaign-shell {
+    padding: 0 1.5rem;
+  }
+
+  .campaign-header {
+    margin-bottom: 3rem;
+  }
+
+  .campaign-section {
+    padding: var(--campaign-section-y-lg) 0;
+  }
 }
 
 /* Slick Carousel Core Styles */

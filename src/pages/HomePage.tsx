@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer";
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen campaign-page">
       <Hero />
       <Stats />
       <AccordionIssues />

@@ -8,6 +8,7 @@ import { BylawsPage } from "./pages/BylawsPage";
 import { BudgetPage } from "./pages/BudgetPage";
 import { BlogPage } from "./pages/BlogPage";
 import { FAQPage } from "./pages/FAQPage";
+import { RouteMeta } from "./components/RouteMeta";
 
 function ScrollToHash() {
   const { hash, pathname } = useLocation();
@@ -32,6 +33,7 @@ export default function App() {
     <BrowserRouter>
       <QuoteMarquee />
       <ScrollToHash />
+      <RouteMeta />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/news" element={<NewsPage />} />

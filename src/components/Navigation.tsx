@@ -29,7 +29,8 @@ export function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-white/95 backdrop-blur-md pt-20 pb-24 overflow-y-auto"
+            className="fixed inset-0 z-40 backdrop-blur-md pt-20 pb-24 overflow-y-auto"
+            style={{ backgroundColor: "rgba(255, 255, 255, 0.96)" }}
           >
             <div className="max-w-7xl mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -39,16 +40,16 @@ export function Navigation() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 border border-gray-100 transition-all hover:shadow-md group"
+                      className="flex items-center p-6 rounded-xl transition-all hover:shadow-md group campaign-card"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <div className="w-12 h-12 rounded-full bg-[#003F72]/10 flex items-center justify-center mr-4 group-hover:bg-[#b11116] transition-colors duration-300">
-                        <Icon className="text-[#003F72] group-hover:text-white transition-colors duration-300" size={24} />
+                      <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 transition-colors duration-300" style={{ backgroundColor: "color-mix(in oklab, var(--campaign-primary) 10%, white)" }}>
+                        <Icon className="transition-colors duration-300" size={24} style={{ color: "var(--campaign-primary)" }} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-bold text-[#003F72] group-hover:text-[#b11116] transition-colors">{item.name}</h3>
+                        <h3 className="text-lg font-bold transition-colors" style={{ color: "var(--campaign-primary)" }}>{item.name}</h3>
                       </div>
-                      <ChevronRight className="text-gray-400 group-hover:text-[#b11116] transition-colors" />
+                      <ChevronRight className="text-gray-400 transition-colors" />
                     </a>
                   );
                 })}
@@ -59,7 +60,7 @@ export function Navigation() {
       </AnimatePresence>
 
       {/* Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-[#003F72] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50">
+      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t-2 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50" style={{ borderTopColor: "var(--campaign-primary)" }}>
         <div className="max-w-7xl mx-auto px-4">
           {/* Mobile Navigation */}
           <div className="md:hidden">
@@ -70,7 +71,8 @@ export function Navigation() {
                   <Link
                     key={item.name}
                     to={item.to}
-                    className="flex flex-col items-center text-[#003F72] hover:text-[#b11116] active:text-white active:bg-[#b11116] rounded-lg transition-all py-1 px-1.5"
+                    className="flex flex-col items-center rounded-lg transition-all py-1 px-1.5"
+                    style={{ color: "var(--campaign-primary)" }}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Icon size={20} />
@@ -78,10 +80,11 @@ export function Navigation() {
                   </Link>
                 );
               })}
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`flex flex-col items-center transition-all py-1 px-1.5 rounded-lg ${isMenuOpen ? 'text-[#b11116]' : 'text-[#003F72] hover:text-[#b11116] active:text-white active:bg-[#b11116]'}`}
-              >
+                <button
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="flex flex-col items-center transition-all py-1 px-1.5 rounded-lg"
+                  style={{ color: isMenuOpen ? "var(--campaign-accent)" : "var(--campaign-primary)" }}
+                >
                 {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
                 <span className="text-[10px] mt-0.5 font-bold">Menu</span>
               </button>
@@ -91,10 +94,10 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex justify-between items-center py-3">
             <div className="flex items-center">
-              <span className="text-2xl font-black text-[#b11116] tracking-tight">
+              <span className="text-2xl font-black tracking-tight" style={{ color: "var(--campaign-accent)" }}>
                 Paul 2026
               </span>
-              <span className="ml-2 text-sm font-semibold text-[#003F72] tracking-wide uppercase">for Ward 6 Kitchener</span>
+              <span className="ml-2 text-sm font-semibold tracking-wide uppercase" style={{ color: "var(--campaign-primary)" }}>for Ward 6 Kitchener</span>
             </div>
             
             <div className="flex items-center space-x-8">
@@ -102,7 +105,8 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   to={item.to}
-                  className="text-[#003F72] hover:text-[#b11116] transition-colors font-bold text-sm uppercase tracking-wide"
+                  className="transition-colors font-bold text-sm uppercase tracking-wide"
+                  style={{ color: "var(--campaign-primary)" }}
                 >
                   {item.name}
                 </Link>
@@ -111,9 +115,10 @@ export function Navigation() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`flex items-center space-x-2 font-bold px-4 py-2 rounded-md transition-colors ${
                   isMenuOpen 
-                    ? 'bg-[#b11116] text-white' 
-                    : 'bg-gray-100 text-[#003F72] hover:bg-gray-200'
+                    ? 'text-white' 
+                    : 'bg-gray-100 hover:bg-gray-200'
                 }`}
+                style={isMenuOpen ? { backgroundColor: "var(--campaign-accent)" } : { color: "var(--campaign-primary)" }}
               >
                 {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
                 <span>MENU</span>

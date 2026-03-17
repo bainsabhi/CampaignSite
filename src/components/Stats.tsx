@@ -9,14 +9,13 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20">
+    <section className="campaign-section bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
         
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-[#b11116] tracking-tight uppercase leading-tight">
-            The Record in Numbers
-          </h2>
+        <div className="campaign-header">
+          <p className="campaign-kicker">Track Record</p>
+          <h2 className="campaign-title">The Record in Numbers</h2>
         </div>
 
         {/* Stats Grid */}

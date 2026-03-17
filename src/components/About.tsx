@@ -16,8 +16,12 @@ const carouselImages = [
     alt: "Paul photo gallery 2"
   },
   {
-    src: "/Images/cor_omc_paul_photo-gallery_jan-2026_6.jpg",
-    alt: "Paul photo gallery 6"
+    src: "/Images/cor_omc_paul_photo-gallery_jan-2026_5.jpg",
+    alt: "Paul photo gallery 5"
+  },
+  {
+    src: "/Images/FireTruck.jpeg",
+    alt: "Paul at community safety event"
   },
   {
     src: "/Images/cor_omc_scott_photo_gallery_jan-2026_5.webp",
@@ -77,8 +81,12 @@ export function About() {
   };
 
   return (
-    <section id="about" className="py-16 bg-white border-y border-[#003F72]/20 overflow-hidden">
+    <section id="about" className="campaign-section bg-white border-y border-[#003F72]/20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="campaign-header">
+          <p className="campaign-kicker">Leadership</p>
+          <h2 className="campaign-title">Meet Paul Singh</h2>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           
           {/* Gallery Carousel */}
@@ -98,9 +106,9 @@ export function About() {
           </div>
 
           <div className="flex flex-col justify-center py-4">
-            <h2 className="text-4xl md:text-5xl text-[#b11116] mb-6 font-black tracking-tight">
-              Meet Paul Singh
-            </h2>
+            <h3 className="text-3xl md:text-4xl text-[#b11116] mb-6 font-black tracking-tight">
+              Results-Driven and Community-Focused
+            </h3>
             <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed font-normal">
               With a decade of results as an elected official and 15 years of dedicated service, Paul Singh offers Ward 6 the assurance of experience. His approach combines professional financial expertise with a commitment to putting neighborhoods first.
             </p>

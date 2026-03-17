@@ -39,13 +39,12 @@ Phone: ${formData.phone || 'Not provided'}
   };
 
   return (
-    <section id="get-involved" className="relative py-16 bg-gray-50">
+    <section id="get-involved" className="relative campaign-section bg-gray-50">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl text-[#b11116] font-black mb-4 tracking-tight">
-            Get Involved
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-normal">
+        <div className="campaign-header">
+          <p className="campaign-kicker">Take Part</p>
+          <h2 className="campaign-title">Get Involved</h2>
+          <p className="campaign-subtitle">
             Every great movement starts with people like you. Join us in building a better future.
           </p>
         </div>

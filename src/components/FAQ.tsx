@@ -83,13 +83,12 @@ const faqItems = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="pt-14 md:pt-16 pb-24 bg-[#F4F7F9] border-b border-gray-200">
+    <section id="faq" className="campaign-section pt-14 md:pt-16 pb-24 border-b border-gray-200" style={{ backgroundColor: "var(--campaign-surface-muted)" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl text-[#b11116] font-black mb-4 tracking-tight">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-normal mb-6">
+        <div className="campaign-header">
+          <p className="campaign-kicker">Need Help?</p>
+          <h2 className="campaign-title">Frequently Asked Questions</h2>
+          <p className="campaign-subtitle">
             Common questions about city services, my role as councillor, and how I can help you navigate local government.
           </p>
         </div>

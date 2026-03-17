@@ -3,7 +3,7 @@ import { Footer } from "../components/Footer";
 
 export function FAQPage() {
   return (
-    <main>
+    <main className="campaign-page min-h-screen">
       <FAQ />
       <Footer />
     </main>

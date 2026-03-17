@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="bg-[#003F72] text-white py-12 pb-24 md:pb-12">
+    <footer className="text-white py-12 pb-24 md:pb-12" style={{ backgroundColor: "var(--campaign-primary)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
@@ -22,7 +22,8 @@ export function Footer() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#b11116] transition-colors"
+                className="bg-white/10 p-2 rounded-full transition-colors"
+                style={{ color: "white" }}
               >
                 <Facebook size={20} />
               </a>
@@ -30,7 +31,7 @@ export function Footer() {
                 href="https://x.com/PaulSinghWard6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#b11116] transition-colors"
+                className="bg-white/10 p-2 rounded-full transition-colors"
               >
                 <Twitter size={20} />
               </a>
@@ -38,13 +39,13 @@ export function Footer() {
                 href="https://www.instagram.com/paulsinghward6/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#b11116] transition-colors"
+                className="bg-white/10 p-2 rounded-full transition-colors"
               >
                 <Instagram size={20} />
               </a>
               <a
                 href="mailto:Paul.Singh@kitchener.ca"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#b11116] transition-colors"
+                className="bg-white/10 p-2 rounded-full transition-colors"
               >
                 <Mail size={20} />
               </a>
@@ -57,10 +58,10 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  to="/#home"
-                  className="text-blue-200 hover:text-white transition-colors"
-                >
+                 <Link
+                   to="/#home"
+                   className="text-blue-200 hover:text-white transition-colors"
+                 >
                   Home
                 </Link>
               </li>
@@ -116,7 +117,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-blue-600 pt-8 text-center text-blue-200 text-sm">
+        <div className="pt-8 text-center text-blue-200 text-sm" style={{ borderTop: "1px solid color-mix(in oklab, var(--campaign-primary) 45%, white)" }}>
           <p className="font-semibold">
             Paid for by Paul Singh
           </p>
